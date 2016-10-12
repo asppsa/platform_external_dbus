@@ -32,7 +32,7 @@
 #define DBUS_DATADIR "/data"
 
 /* Disable assertion checking */
-#undef DBUS_DISABLE_ASSERT
+#define DBUS_DISABLE_ASSERT 1
 
 /* Disable public API sanity checking */
 #undef DBUS_DISABLE_CHECKS
@@ -301,3 +301,5 @@
 #define X_DISPLAY_MISSING 1
 
 #define HAVE_UNIX_FD_PASSING 1
+
+#define DISABLE_SYSTEMD 1

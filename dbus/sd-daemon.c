@@ -32,7 +32,15 @@
 #include <sys/stat.h>
 #include <sys/socket.h>
 #include <sys/un.h>
+
+#if defined(DISABLE_SYSTEMD) || !defined(__linux__)
 #include <sys/fcntl.h>
+#else
+#define F_GETFD 0
+#define FD_CLOEXEC 0
+#define F_SETFD 0
+#endif
+
 #include <netinet/in.h>
 #include <stdlib.h>
 #include <errno.h>

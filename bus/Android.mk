@@ -1,7 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_C_INCLUDES:= $(LOCAL_PATH)/..
+LOCAL_C_INCLUDES:= $(LOCAL_PATH)/.. \
+  	external/expat/lib/
 
 LOCAL_CFLAGS:= \
 	-O3 \
